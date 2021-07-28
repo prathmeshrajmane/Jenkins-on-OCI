@@ -22,15 +22,6 @@ pipeline {
                 sh 'echo "Tests successful"'
           }
         }
-        stage('Push image to Object Storage') {
-         /* Final stage of build; Push the 
-            docker image to our OCI private Registry*/
-        steps {
-            sh "sudo docker login -u 'idp340vrk4m9/demo_builder' -p 'ldW]R:#VDT0UK423Q5al' iad.ocir.io"
-            sh "sudo docker tag customnginx:1 iad.ocir.io/idp340vrk4m9/nginx:custom"
-            sh 'sudo docker push iad.ocir.io/idp340vrk4m9/nginx:custom'
-            
-           }
-         }      
+          
     }
 }
