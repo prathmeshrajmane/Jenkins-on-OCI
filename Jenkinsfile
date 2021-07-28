@@ -15,7 +15,8 @@ pipeline {
 
     stage('Test image') {
       steps {
-        sh 'echo "Tests successful"'
+        sh '''sudo docker run -d -it -p 8080:80 customnginx:1
+'''
       }
     }
 
