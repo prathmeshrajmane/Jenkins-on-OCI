@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'nginx:latest'
-    }
-
-  }
+  agent any
   stages {
     stage('Fetch dependencies') {
       steps {
