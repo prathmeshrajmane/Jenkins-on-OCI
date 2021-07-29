@@ -16,7 +16,8 @@ pipeline {
     stage('Test image') {
       steps {
         sh '''sudo docker run -d -it -p 1234:80 customnginx:1
-'''
+
+sudo docker images nginx:latest'''
       }
     }
 
